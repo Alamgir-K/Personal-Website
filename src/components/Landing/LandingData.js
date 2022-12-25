@@ -4,7 +4,8 @@ export default [
         title: "Work Experience",
         text: "View my work experiences",
         logo: "briefcase.png",
-        color: '#2900e8'
+        color: '#2900e8',
+        background: 'rocket-1.svg'
     },
     {
         id: 2,

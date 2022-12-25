@@ -13,20 +13,20 @@ export default function (props) {
     }
 
   return (
-    <div className={`bg-white rounded-[70px] flex relative justify-center p-5`} style={{backgroundColor: props.item.color}} onMouseEnter={handleMarqueeHover} onMouseLeave={handleMarqueeHover}>
-
-        <div className='flex w-full' id={`landing-bg-${props.item.id}`}>
-            <Marquee gradient={false} speed={150} className='invisible sm:visible' play={marqueeMove}>
-            <div className='flex items-center justify-center landing-title w-full pb-10'>
-                <p className={`mr-4 text-5xl lg:text-8xl text-center font-semibold text-${fontColor}`}>{props.item.text}.</p>
-            </div> 
-            </Marquee>
+    <div className={`bg-white rounded-[70px] flex relative justify-center p-5 landing-item`} id={`landing-bg-${props.item.id}`} style={{backgroundColor: props.item.color}} onMouseEnter={handleMarqueeHover} onMouseLeave={handleMarqueeHover}>
+        
+        <div className='hidden lg:flex w-full'>
+                <Marquee gradient={false} speed={150} className='' play={marqueeMove}>
+                <div className='flex items-center justify-center landing-title w-full pb-10'>
+                    <p className={`mr-4 text-5xl lg:text-8xl text-center font-semibold text-${fontColor}`}>{props.item.text}.</p>
+                </div> 
+                </Marquee>
         </div>
 
         <div className={`flex items-center m-8 ${isPill ? 'flex-col justify-center' : 'absolute inset-x-0 bottom-0 justify-between'} lg:justify-between lg:flex-row lg:absolute inset-x-0 bottom-0`}>
                 <p className={`text-center text-xl font-semibold text-${fontColor}`}>{props.item.title}</p>
                 <img className='w-8 ' src={`./images/${props.item.logo}`}></img>
-            </div>
+        </div>
     </div>
   )
 }
