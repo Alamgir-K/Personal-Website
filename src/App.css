@@ -31,8 +31,17 @@
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-size: 35%;
+  background-size: 35% 50%;
+  
+}
+
+.experience-title-block {
+  background-color: #A5A1FF
+}
+
+.experience-description-block {
+  background-color: #1B1B1F;
+  color: #A5A1FF;
 }
 
 

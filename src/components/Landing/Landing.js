@@ -1,5 +1,5 @@
 import React from 'react'
-import LandingBlockItem from '../LandingBlockItem/LandingBlockItem'
+import LandingItem from '../LandingItem/LandingItem'
 import LandingData from './LandingData'
 import { TypeAnimation } from 'react-type-animation'
 
@@ -18,16 +18,16 @@ export default function () {
 
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 lg:h-4/6 p-2'>
             <div className='col-span-2 row-span-2 lg:col-span-2 lg:row-span-2 h-96 lg:h-full'>
-                <LandingBlockItem item={LandingData[0]}></LandingBlockItem>
+                <LandingItem item={LandingData[0]}></LandingItem>
             </div>
             <div className='col-span-1 h-60 lg:h-full'>
-                <LandingBlockItem item={LandingData[1]}></LandingBlockItem>
+                <LandingItem item={LandingData[1]}></LandingItem>
             </div>
             <div className='col-span-1 h-60 lg:h-full'>
-                <LandingBlockItem item={LandingData[2]}></LandingBlockItem>
+                <LandingItem item={LandingData[2]}></LandingItem>
             </div>
             <div className='col-span-2 lg:col-start-3 h-60 lg:h-full'>
-                <LandingBlockItem item={LandingData[3]}></LandingBlockItem>
+                <LandingItem item={LandingData[3]}></LandingItem>
             </div>
         </div>
     </div>

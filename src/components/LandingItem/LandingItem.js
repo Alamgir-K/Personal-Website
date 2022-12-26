@@ -13,7 +13,7 @@ export default function (props) {
     }
 
   return (
-    <div className={`bg-white rounded-[70px] flex relative justify-center p-5 landing-item`} id={`landing-bg-${props.item.id}`} style={{backgroundColor: props.item.color}} onMouseEnter={handleMarqueeHover} onMouseLeave={handleMarqueeHover}>
+    <div className={`rounded-[70px] flex relative justify-center p-5 landing-item`} id={`landing-bg-${props.item.id}`} style={{backgroundColor: props.item.color}} onMouseEnter={handleMarqueeHover} onMouseLeave={handleMarqueeHover}>
         
         <div className='hidden lg:flex w-full'>
                 <Marquee gradient={false} speed={150} className='' play={marqueeMove}>
