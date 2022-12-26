@@ -27,13 +27,13 @@ export default function ExperienceItem(props) {
               <div className='flex flex-wrap place-self-start mt-8 basis-full col-span-3'>
                 <p className='font-semibold'>{props.item.startDate} - {props.item.endDate}</p>
               </div>
-              <div className='flex flex-wrap col-span-3'>
+              <div className='flex flex-wrap items-center col-span-3'>
                 {points}
               </div>
             </div>
         </div>
 
-        <div className='flex absolute right-auto h-72 w-24 lg:w-32 z-1 experience-description-block'>
+        <div className='flex absolute right-auto h-96 xl:h-72 w-24 lg:w-32 z-1 experience-description-block'>
         </div>
         
     </div>

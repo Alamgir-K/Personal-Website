@@ -2,7 +2,6 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 let leftRevealElements = []
 let rightRevealElements = []
-let scrollFactor = 1.0
 
 // const elementsToRemove = ['landing-bg-2', 'landing-bg-3']
 
@@ -24,21 +23,65 @@ let scrollFactor = 1.0
 
 // window.onresize = removeElements
 
+// function watchForReveal() {
+//     window.addEventListener('scroll', () => {
+//         let scrolled = window.pageYOffset * 0.1
+//         let leftIndex = 0
+//         let leftStagger = 0.5
+//         let translate = scrollFactor * scrolled
+//         const translateCopy = translate
+
+//         for (const leftRevealElement of leftRevealElements) {
+//             leftIndex++
+//             const currentLeft = window.scrollX + leftRevealElement.getBoundingClientRect().left
+
+//             if (leftIndex > 1) {
+//                 translate = scrollFactor * scrolled * leftStagger
+//                 leftStagger = leftStagger * 0.5
+//             }
+
+//             if (currentLeft > 10.0) {
+//                 leftRevealElement.style.transform = `translateX(-${translate}%)`
+//             }
+//         }
+        
+//         let rightIndex = 0
+//         let rightStagger = 0.5
+//         translate = translateCopy
+
+//         for (const rightRevealElement of rightRevealElements) {
+//             rightIndex++
+//             const currentRight = window.scrollX + rightRevealElement.getBoundingClientRect().right
+
+//             if (rightIndex > 1) {
+//                 translate = scrollFactor * scrolled * rightStagger
+//                 rightStagger = rightStagger * 0.5
+//             }
+
+//             if (currentRight < window.innerWidth - 10.0) {
+//                 rightRevealElement.style.transform = `translateX(${translate}%)`
+//             }
+//         }
+//     })
+// }    
+
 function watchForReveal() {
     window.addEventListener('scroll', () => {
+        let scrollFactor = 1.0
         let scrolled = window.pageYOffset * 0.1
         let leftIndex = 0
-        let leftStagger = 0.5
+        let leftStagger = 25
         let translate = scrollFactor * scrolled
         const translateCopy = translate
 
         for (const leftRevealElement of leftRevealElements) {
             leftIndex++
             const currentLeft = window.scrollX + leftRevealElement.getBoundingClientRect().left
+            console.log(translate)
 
             if (leftIndex > 1) {
-                translate = scrollFactor * scrolled * leftStagger
-                leftStagger = leftStagger * 0.5
+                translate = scrollFactor * scrolled - leftStagger
+                leftStagger = leftStagger * 2
             }
 
             if (currentLeft > 10.0) {
@@ -47,7 +90,7 @@ function watchForReveal() {
         }
         
         let rightIndex = 0
-        let rightStagger = 0.5
+        let rightStagger = 25
         translate = translateCopy
 
         for (const rightRevealElement of rightRevealElements) {
@@ -55,19 +98,16 @@ function watchForReveal() {
             const currentRight = window.scrollX + rightRevealElement.getBoundingClientRect().right
 
             if (rightIndex > 1) {
-                translate = scrollFactor * scrolled * rightStagger
-                rightStagger = rightStagger * 0.5
+                translate = scrollFactor * scrolled - rightStagger
+                rightStagger = rightStagger * 2
             }
 
             if (currentRight < window.innerWidth - 10.0) {
                 rightRevealElement.style.transform = `translateX(${translate}%)`
             }
         }
-
-        
-
     })
-}    
+}  
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -84,7 +124,7 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 
-async function hello() {
+async function scrollReveal() {
     await delay(50)
     leftRevealElements = document.querySelectorAll('.reveal-left')
     rightRevealElements = document.querySelectorAll('.reveal-right')
@@ -97,5 +137,5 @@ async function hello() {
 //     window.scrollTo(0, 0);
 //   }
 
-hello()
+scrollReveal()
 

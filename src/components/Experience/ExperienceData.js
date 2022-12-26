@@ -1,14 +1,14 @@
 export default [
-    // {
-    //     company: 'Amazon',
-    //     role: 'Software Development Engineer Intern',
-    //     startDate: 'May 2022',
-    //     endDate: 'July 2022',
-    //     description: [
-    //         'Incoming'
-    //     ]
-    // },
-    // logo: 'Amazon.png'
+    {
+        company: 'Amazon',
+        role: 'Software Development Engineer Intern',
+        startDate: 'May 2022',
+        endDate: 'July 2022',
+        description: [
+            'Incoming intern at the Toronto office for the Summer of 2023.'
+        ],
+        logo: 'AmazonLogo.png'
+    },
     {
         company: 'Security Compass',
         role: 'Software Engineer Intern',
