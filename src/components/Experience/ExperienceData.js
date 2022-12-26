@@ -2,8 +2,8 @@ export default [
     {
         company: 'Amazon',
         role: 'Software Development Engineer Intern',
-        startDate: 'May 2022',
-        endDate: 'July 2022',
+        startDate: 'May 2023',
+        endDate: 'July 2023',
         description: [
             'Incoming intern at the Toronto office for the Summer of 2023.'
         ],

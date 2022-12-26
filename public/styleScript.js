@@ -23,48 +23,6 @@ let rightRevealElements = []
 
 // window.onresize = removeElements
 
-// function watchForReveal() {
-//     window.addEventListener('scroll', () => {
-//         let scrolled = window.pageYOffset * 0.1
-//         let leftIndex = 0
-//         let leftStagger = 0.5
-//         let translate = scrollFactor * scrolled
-//         const translateCopy = translate
-
-//         for (const leftRevealElement of leftRevealElements) {
-//             leftIndex++
-//             const currentLeft = window.scrollX + leftRevealElement.getBoundingClientRect().left
-
-//             if (leftIndex > 1) {
-//                 translate = scrollFactor * scrolled * leftStagger
-//                 leftStagger = leftStagger * 0.5
-//             }
-
-//             if (currentLeft > 10.0) {
-//                 leftRevealElement.style.transform = `translateX(-${translate}%)`
-//             }
-//         }
-        
-//         let rightIndex = 0
-//         let rightStagger = 0.5
-//         translate = translateCopy
-
-//         for (const rightRevealElement of rightRevealElements) {
-//             rightIndex++
-//             const currentRight = window.scrollX + rightRevealElement.getBoundingClientRect().right
-
-//             if (rightIndex > 1) {
-//                 translate = scrollFactor * scrolled * rightStagger
-//                 rightStagger = rightStagger * 0.5
-//             }
-
-//             if (currentRight < window.innerWidth - 10.0) {
-//                 rightRevealElement.style.transform = `translateX(${translate}%)`
-//             }
-//         }
-//     })
-// }    
-
 function watchForReveal() {
     window.addEventListener('scroll', () => {
         let scrollFactor = 1.0
@@ -112,11 +70,6 @@ function watchForReveal() {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            if (entry.target.classList.contains('reveal-right')) {
-            }
-            else if (entry.target.classList.contains('reveal-left')) {
-                
-            }
             watchForReveal()
 
         }
