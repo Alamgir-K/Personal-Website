@@ -6,7 +6,7 @@ export default function (props) {
 
     const [marqueeMove, setmarqueeMove] = useState(false)
 
-    const isPill = props.item.id === 2 || props.item.id === 3
+    const isPill = props.item.id === 2 || props.item.id === 3 || props.item.id === 4
 
     function handleMarqueeHover() {
         setmarqueeMove(!marqueeMove)
@@ -23,9 +23,9 @@ export default function (props) {
                 </Marquee>
         </div>
 
-        <div className={`flex items-center m-8 ${isPill ? 'flex-col justify-center' : 'absolute inset-x-0 bottom-0 justify-between'} lg:justify-between lg:flex-row lg:absolute inset-x-0 bottom-0`}>
+        <div className={`flex items-center m-8 ${isPill ? 'flex-col justify-center' : 'absolute inset-x-0 bottom-0 justify-between'} md:justify-between md:flex-row md:absolute inset-x-0 bottom-0`}>
                 <p className={`text-center text-xl font-semibold text-${fontColor}`}>{props.item.title}</p>
-                <img className='w-8 ' src={`./images/${props.item.logo}`}></img>
+                <img className={`${isPill ? 'mt-4' : ''} w-8`} src={`./images/${props.item.logo}`}></img>
         </div>
     </div>
   )

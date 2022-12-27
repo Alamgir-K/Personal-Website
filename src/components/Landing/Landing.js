@@ -20,13 +20,13 @@ export default function () {
             <div className='col-span-2 row-span-2 lg:col-span-2 lg:row-span-2 h-96 lg:h-full'>
                 <LandingItem item={LandingData[0]}></LandingItem>
             </div>
-            <div className='col-span-1 h-60 lg:h-full'>
+            <div className='col-span-1 h-52 md:h-60 lg:h-full'>
                 <LandingItem item={LandingData[1]}></LandingItem>
             </div>
-            <div className='col-span-1 h-60 lg:h-full'>
+            <div className='col-span-1 h-52 md:h-60 lg:h-full'>
                 <LandingItem item={LandingData[2]}></LandingItem>
             </div>
-            <div className='col-span-2 lg:col-start-3 h-60 lg:h-full'>
+            <div className='col-span-2 lg:col-start-3 h-52 md:h-60 lg:h-full'>
                 <LandingItem item={LandingData[3]}></LandingItem>
             </div>
         </div>
