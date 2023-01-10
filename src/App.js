@@ -4,7 +4,7 @@ import Landing from './components/Landing/Landing';
 
 function App() {
   return (
-    <div className=''>
+    <div className='overflow-x-hidden'>
       <Landing></Landing>
       <Experience></Experience>
     </div>
