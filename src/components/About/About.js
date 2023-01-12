@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee'
 
 export default function About() {
 
-    const images = ['album1.jpg', 'album2.jpg', 'album3.jpg', 'album4.jpg', 'album5.jpg', 'album6.jpg']
+    const images = ['album1.jpg', 'album2.jpg', 'album7.jpg', 'album9.jpg', 'album5.jpg', 'album6.jpg']
     const slideShow = images.map((image, index) => {
         const imageSrc = 'images/' + image
         return <div className='col-span-1 row-span-1'>
