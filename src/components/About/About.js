@@ -11,7 +11,7 @@ export default function About() {
         </div>})
 
   return (
-    <div className='h-fit about rounded-[70px] m-2 overflow-hidden'>
+    <div className='h-fit about rounded-[70px] m-2 overflow-hidden' id='landing-link-3'>
         <div className='py-16 lg:py-20'>
                 <Marquee gradient={false} speed={150} className=''>
                     <div className='flex items-center justify-center w-full'>
