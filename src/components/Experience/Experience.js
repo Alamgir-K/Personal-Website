@@ -11,7 +11,7 @@ export default function Experience() {
           <p className={`text-xl lg:text-xl font-semibold`}>WHERE I'VE WORKED</p>
         </div>
 
-        <div className='pl-12 pt-12 sm:pl-16 sm:pt-16'>
+        <div className='px-12 pt-12 sm:px-16 sm:pt-16'>
           <p className={`tracking-wide lg:leading-none xl:leading-tight text-4xl sm:text-6xl md:text-7xl lg:text-8xl`}>I have experience across the FinTech, Cybersecurity and Big Tech space.</p>
         </div>
       </div>
