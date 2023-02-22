@@ -18,20 +18,34 @@ export default function (props) {
     }
 
   return (
-    <div className={`rounded-[70px] flex relative justify-center p-5 landing-item`} id={`landing-bg-${props.item.id}`} style={{backgroundColor: props.item.color}} onClick={handleOnClick} onMouseEnter={handleMarqueeHover} onMouseLeave={handleMarqueeHover}>
+    <div className={`rounded-[60px] flex relative justify-center p-5 landing-item
+            lg:rounded-[70px]`} 
+    id={`landing-bg-${props.item.id}`} 
+    style={{backgroundColor: props.item.color}} 
+    onClick={handleOnClick} onMouseEnter={handleMarqueeHover} onMouseLeave={handleMarqueeHover}>
         
-        <div className='hidden lg:flex w-full'>
+        <div className='hidden w-full
+                sm:flex'>
                 <Marquee gradient={false} speed={150} className='' play={marqueeMove}>
                 <div className='flex items-center justify-center landing-title w-full pb-10'>
-                    <p className={`mr-4 text-5xl lg:text-8xl text-center font-semibold text-${fontColor}`}>{props.item.text}.</p>
+                    <p className={`mr-4 text-center font-semibold text-${fontColor}
+
+                          ${isPill ? 'text-5xl lg:text-8xl' : 'text-8xl'}
+                          `}>
+                      {props.item.text}.
+                    </p>
                 </div> 
                 </Marquee>
         </div>
 
-        <div className={`flex items-center m-8 ${isPill ? 'flex-col justify-center' : 'absolute inset-x-0 bottom-0 justify-between'} md:justify-between md:flex-row md:absolute inset-x-0 bottom-0`}>
+        <div className={`flex items-center justify-between mx-8 my-8 absolute inset-x-0 bottom-0
+                ${isPill ? 'flex-col my-16 sm:my-8 sm:flex-row' : ''}`}>
                 <p className={`text-center text-xl font-semibold text-${fontColor}`}>{props.item.title}</p>
                 <img className={`${isPill ? 'mt-4' : ''} w-8`} src={`./images/${props.item.logo}`}></img>
         </div>
     </div>
   )
 }
+
+
+// ${isPill ? 'flex-col justify-center' : 'absolute inset-x-0 bottom-0 justify-between'}
