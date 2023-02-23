@@ -30,8 +30,6 @@ function getIntersectionRatio(element) {
     });
 }
 
-
-
 function shiftLeft(element) {
     getIntersectionRatio(element).then((ratio) => {
         let percentage = ratio * 100
@@ -43,12 +41,22 @@ function shiftLeft(element) {
     });
 }
 
+
 function shiftRight(element) {
     getIntersectionRatio(element).then((ratio) => {
         let percentage = ratio * 100
         if (percentage > 75) {
             if (window.innerWidth - element.getBoundingClientRect().right > 15) {
-                element.style.left = Math.min(50.0, percentage - 50) + '%';
+                // Lg Breakpoint: 1024px
+                if (window.innerWidth >= 1024) {
+                    element.style.left = Math.min(50.0, percentage - 50) + '%';
+                }
+                else {
+                    // Left starts at ~13%
+                    // Left ends at ~25%
+                    element.style.left = Math.max(13.0, percentage - 75) + '%';
+                }
+                
             }
         }
     });
