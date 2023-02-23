@@ -4,14 +4,19 @@ import Marquee from 'react-fast-marquee'
 export default function About() {
 
     const images = ['album1.jpg', 'album2.jpg', 'album7.jpg', 'album9.jpg', 'album5.jpg', 'album6.jpg']
+
     const slideShow = images.map((image, index) => {
         const imageSrc = 'images/' + image
         return <div className='col-span-1 row-span-1'>
-            <img src={imageSrc} className='object-contain border-solid rounded-full border-2 border-[#FFAED8]' key={index}/>
+            <img className='object-contain border-solid rounded-full border-2 border-[#FFAED8]' 
+                src={imageSrc} 
+                key={"image" + index}/>
         </div>})
 
   return (
-    <div className='h-fit about rounded-[70px] m-2 overflow-hidden' id='landing-link-3'>
+    <div className='h-fit about rounded-[60px] m-2 overflow-hidden
+            lg:rounded-[70px]' 
+         id='landing-link-3'>
         <div className='py-16 lg:py-20'>
                 <Marquee gradient={false} speed={150} className=''>
                     <div className='flex items-center justify-center w-full'>
