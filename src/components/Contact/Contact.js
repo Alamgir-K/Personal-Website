@@ -31,7 +31,7 @@ export default function Contact() {
 
             <div className='col-span-2'>
                 <a className='text-xl font-semibold rounded-full border-[#D4C951] border-2 p-4 mr-2' href="https://www.linkedin.com/in/kalamgir/" target="_blank">LinkedIn</a>
-                <a className='text-xl font-semibold rounded-full border-[#D4C951] border-2 p-4 ml-2' href="">Resume</a>
+                <a className='text-xl font-semibold rounded-full border-[#D4C951] border-2 p-4 ml-2' href="Alamgir_Khan_Resume.pdf" target="_blank">Resume</a>
             </div>
         </div>
         
