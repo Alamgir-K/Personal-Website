@@ -11,6 +11,23 @@ window.onbeforeunload = function () {
 // }
 
 
+const scrollSpeedFactor = 0.5;
+
+function handleScroll(event) {
+    event.preventDefault();
+    const deltaY = event.deltaY;
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollAmount = deltaY * scrollSpeedFactor;
+
+    const newScrollTop = scrollTop + scrollAmount;
+    window.scrollTo({ top: newScrollTop, behavior: 'auto' });
+}
+
+// window.addEventListener('wheel', handleScroll, { passive: false });
+
+
+
+
 function getIntersectionRatio(element) {
     return new Promise((resolve) => {
         // Create an observer instance
@@ -56,13 +73,13 @@ function shiftRight(element) {
                     // Left ends at ~25%
                     element.style.left = Math.max(13.0, percentage - 75) + '%';
                 }
-                
+
             }
         }
     });
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     let leftRevealElements = [...document.querySelectorAll('.reveal-left')];
     let rightRevealElements = [...document.querySelectorAll('.reveal-right')];
     leftRevealElements.forEach((element, index) => shiftLeft(element))
