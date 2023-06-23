@@ -1,6 +1,6 @@
 export default [
     {
-        company: 'Fintorch',
+        company: 'FinTorch',
         role: 'Frontend Developer',
         startDate: 'May 2023',
         endDate: 'Present',
