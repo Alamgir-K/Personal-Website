@@ -19,7 +19,7 @@ export default function About() {
             lg:rounded-[70px]'
             id='landing-link-3'>
             <div className='py-16 lg:py-20'>
-                <Marquee gradient={false} speed={150} className=''>
+                <Marquee gradient={false} speed={150} className='overflow-y-hidden'>
                     <div className='flex items-center justify-center w-full'>
                         <p className={`mr-4 text-7xl md:text-8xl lg:text-9xl text-center`}>Hi There! My name's Alamgir Khan.</p>
                     </div>
@@ -29,7 +29,7 @@ export default function About() {
             <div className='grid grid-cols-1 lg:grid-cols-2 pt-2 md:pt-6 lg:pt-10 gap-4 lg:gap-0 pb-20'>
                 <div className='px-10'>
                     <p className='text-xl lg:text-3xl font-light'>
-                        I'm a 3<sup>rd</sup> year student at The University of Toronto, pursuing a Double Major in Computer Science and Computational Cognition. I have a keen interest in full-stack development, espescially in the technology, finance, and/or gaming space.
+                        I'm a 4<sup>th</sup> year student at The University of Toronto, pursuing a Double Major in Computer Science and Computational Cognition. I have a keen interest in full-stack development, espescially in the technology, finance, and/or gaming space.
                     </p>
                 </div>
                 <div className='px-10'>

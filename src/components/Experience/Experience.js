@@ -14,24 +14,27 @@ export default function Experience() {
         </div>
 
         <div className='px-12 py-12 sm:px-16 sm:py-16'>
-          <p className={`tracking-wide text-4xl 
+          <p className={`text-4xl
               sm:text-5xl 
               md:text-7xl 
               lg:text-8xl lg:leading-none
-              xl:leading-tight`}>I have experience across the FinTech, Cybersecurity and Big Tech space.</p>
+              xl:leading-tight`}>I have experience across the Big Tech, FinTech, and Cybersecurity space.</p>
         </div>
       </div>
 
-      <div className='grid grid-rows-3 mx-2 gap-2 mt-2'>
-          <div className='h-52 md:h-72 lg:h-96 xl:h-72 w-full'>
-              <ExperienceItem item={ExperienceData[0]}></ExperienceItem>
-          </div>
-          <div className='h-52 md:h-72 lg:h-96 xl:h-72 w-full'>
-              <ExperienceItem item={ExperienceData[1]}></ExperienceItem>
-          </div>
-          <div className='h-52 md:h-72 lg:h-96 xl:h-72 w-full'>
-              <ExperienceItem item={ExperienceData[2]}></ExperienceItem>
-          </div>
+      <div className='grid grid-rows-4 mx-2 gap-2 mt-2'>
+        <div className='h-52 md:h-72 lg:h-96 xl:h-96 w-full'>
+          <ExperienceItem item={ExperienceData[0]}></ExperienceItem>
+        </div>
+        <div className='h-52 md:h-72 lg:h-96 xl:h-72 w-full'>
+          <ExperienceItem item={ExperienceData[1]}></ExperienceItem>
+        </div>
+        <div className='h-52 md:h-72 lg:h-96 xl:h-72 w-full'>
+          <ExperienceItem item={ExperienceData[2]}></ExperienceItem>
+        </div>
+        <div className='h-52 md:h-72 lg:h-96 xl:h-72 w-full'>
+          <ExperienceItem item={ExperienceData[3]}></ExperienceItem>
+        </div>
       </div>
     </div>
   )
