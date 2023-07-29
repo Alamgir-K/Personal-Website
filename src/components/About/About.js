@@ -18,13 +18,21 @@ export default function About() {
         <div className='h-fit about rounded-[60px] m-2 overflow-hidden
             lg:rounded-[70px]'
             id='landing-link-3'>
-            <div className='py-16 lg:py-20'>
+            {/* <div className='py-16 lg:py-20'> */}
+            <div className='pt-16 lg:pt-20 pb-8 md:pb-16 lg:pb-20'>
                 <Marquee gradient={false} speed={150} className='overflow-y-hidden'>
                     <div className='flex items-center justify-center w-full'>
-                        <p className={`mr-4 text-7xl md:text-8xl lg:text-9xl text-center`}>Hi There! My name's Alamgir Khan.</p>
+                        {/* <p className={`mr-4 text-7xl md:text-8xl lg:text-9xl text-center`}>Hi There! My name's Alamgir Khan.</p> */}
+                        <p className={`mr-4 text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-center`}>Hi There! My name's Alamgir Khan.</p>
                     </div>
                 </Marquee>
             </div>
+
+            {/* text-4xl
+              sm:text-5xl 
+              md:text-7xl 
+              lg:text-8xl lg:leading-none
+              xl:leading-tight */}
 
             <div className='grid grid-cols-1 lg:grid-cols-2 pt-2 md:pt-6 lg:pt-10 gap-4 lg:gap-0 pb-20'>
                 <div className='px-10'>

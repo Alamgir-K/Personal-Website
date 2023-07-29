@@ -17,7 +17,7 @@ export default [
         startDate: 'May 2023',
         endDate: 'July 2023',
         description: [
-            "Spearheaded the design and development of a test suite using the Python AWS SDK, pytest, PyMongo, and AWS Fargate to measure downtime caused by DocumentDB engine upgrades across 10+ instance classes.",
+            "Spearheaded the design and development of a test suite using the Python AWS SDK, pytest, PyMongo, and AWS Fargate to measure downtime caused by DocumentDB engine upgrades across 15 instance classes.",
             "Implemented an automatic response system through the Amazon CloudWatch client to raise alarms and auto-generate crash tickets when the downtime exceeded a predetermined threshold to ensure efficient incident management.",
             "Enhanced system performance by 1500% through multi-processing and multi-threading functionalities, enabling concurrent measurement of writer and reader downtimes for each instance."
         ],
