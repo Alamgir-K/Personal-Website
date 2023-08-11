@@ -1,7 +1,7 @@
 export default [
     {
         company: 'FinTorch',
-        role: 'Frontend Developer',
+        role: 'Co-founder & Frontend Developer',
         startDate: 'May 2023',
         endDate: 'Present',
         description: [
