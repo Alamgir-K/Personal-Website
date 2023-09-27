@@ -1,9 +1,19 @@
 export default [
     {
+        company: 'Centivizer',
+        role: 'Project Manager',
+        startDate: 'May 2023',
+        endDate: 'April 2024',
+        description: [
+            "Overseeing the development and progress of the BrainTagger game"
+        ],
+        logo: 'CentivizerLogo.png'
+    },
+    {
         company: 'FinTorch',
         role: 'Co-founder & Frontend Developer',
         startDate: 'May 2023',
-        endDate: 'Present',
+        endDate: 'September 2023',
         description: [
             "Led the overhaul and development of a Next.js website using React, TypeScript, and Tailwind, improving mobile accessibility for 50%+ users.",
             "Engineered secure and user-friendly sign up, log in, and profile pages leveraging NextAuth.js, enhancing user accessibility and convenience on the platform.",
